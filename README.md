@@ -55,7 +55,7 @@ i_t = \sigma(W_i [h_{t-1}, x_t] + b_i)
 $$
 
 $$
-\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)
+C_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)
 $$
 
 $$
