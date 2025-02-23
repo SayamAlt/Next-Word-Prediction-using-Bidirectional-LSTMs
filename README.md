@@ -46,29 +46,29 @@ The **Bidirectional LSTM (BiLSTM)** model consists of:
 
 Mathematically, the LSTM updates are given by:
 
-\[
-f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-\]
+$$
+f_t = \sigma(W_f [h_{t-1}, x_t] + b_f)
+$$
 
-\[
-i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
-\]
+$$
+i_t = \sigma(W_i [h_{t-1}, x_t] + b_i)
+$$
 
-\[
-\tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)
-\]
+$$
+\tilde{C}_t = \tanh(W_C [h_{t-1}, x_t] + b_C)
+$$
 
-\[
+$$
 C_t = f_t \odot C_{t-1} + i_t \odot \tilde{C}_t
-\]
+$$
 
-\[
-o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)
-\]
+$$
+o_t = \sigma(W_o [h_{t-1}, x_t] + b_o)
+$$
 
-\[
+$$
 h_t = o_t \odot \tanh(C_t)
-\]
+$$
 
 where:
 
